@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <title>Montgomery_Analisys</title>
+    </head>
+    <body>
+        <header>
+            <h1>Inventory information about fleet of vehicles</h1>
+        </header>
+        <body>
+            <section>
+                <h3>
+                    Data Cleaning
+                </h3>
+                <p> 
+                    The following data comes from: <a href = "https://data.montgomerycountymd.gov/Government/Fleet-Equipment-Inventory/93vc-wpdr/about_data"> 
+                    Montgomery_Fleet_Equipment_Inventory_FA_PART_1_START.CSV</a> 
+                </p>
+                <p>
+                    Data looks like:
+                </p>
+                <img src ="Montgomery_fleet_equipment_inventory.jpg">
+                <p>
+                    Firts of all, we format the cvs archive as data table in excel
+                    this allow us to filter and set pivot tables in a proper way
+                </p>
+                <img src = "Montgomery_file_equipment_inventory_set_table.jpg">
+                <p>
+                    Let's clean our data by removing empty and duplicated rows. 
+                    For removing empty rows we can filter any column by empty celds 
+                    and delate that rows.
+                </p>
+                <img src = "Montgomery_file_equipment_inventory_empty_rows.jpg">
+
+                <P>
+                    Once we removed empty rows we need to remove duplicated rows. We can
+                    do it with the buttom remove duplicates
+                </P>
+                <img src = "Montgomery_file_equipment_inventory_duplicated_rows.jpg">
+                <p>
+                    We check for spelling mistakes and extra blanck spaces in the data and fix them, 
+                </p>
+                <img src="Montgomery_file_equipment_inventory_spelling_mistakes.jpg">
+                <p>
+                    We use Flash Fill to reduce the department names (columns A and B) to just one column
+                </p>
+                <img src = "Montgomery_file_equipment_inventory_full_fill.jpg">
+            </section>  
+            <section>
+                <h3>
+                    Data Analisys
+                </h3>
+                <p>
+                    The quantity of equipment can be obtained by summing column C, 
+                    resulting in 549 vehicles. The data shows a highly uneven distribution 
+                    of equipment, with minimum values indicating specialized or low-demand usage, 
+                    while maximum values highlight operationally critical departments. 
+                    The average serves only as a general reference due to high variability.
+                    We could make an extensive analisys with a pivot table
+                </p>
+                <img src = "Montgomery_fleet_equipment_inventory_Total_equipment.jpg" >
+                <p>
+                    The distribution of equipment is highly concentrated in operational departments 
+                    such as General Services and Fire and Rescue, while administrative departments 
+                    show minimal allocation. This reflects functional priorities rather than an even 
+                    distribution.
+                </p>
+                <img src = "Montgomery_fleet_equipment_inventory_pivot_table.jpg">
+                <p>
+                    General Services’ fleet is primarily composed of utility and off-road vehicles, 
+                    reflecting its role as an operational support department across multiple functions.
+                </p>
+                <img src = "Montgomery_fleet_equipment_inventory_general_services_equipment.jpg">
+            </section>      
+            <br>
+            <a href = ../../index.html>P&aacute;gina principal</a>
+        </body>
+    </body>
+</html>
